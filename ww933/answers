@@ -1,0 +1,53 @@
+import os
+
+os.path.abspath?
+Type:       function
+String Form:<function abspath at 0x7fbe72b8f9b0>
+File:       /usr/lib/python2.7/posixpath.py
+Definition: os.path.abspath(path)
+Docstring:  Return an absolute path.
+
+#the function is defined in /usr/lib/python2.7/posixpath.py ------1
+
+num=int(os.popen('ls /etc | wc -l').read())
+
+#This is the single command I used -------------------------------2
+
+num
+Out[6]: 232
+
+import math
+
+from math import sqrt as math_sqrt
+
+math_sqrt(num)
+Out[10]: 15.231546211727817
+
+#the square root of num is 15.231546211727817 --------------------3
+
+x=12345
+
+import numpy
+
+%timeit x**2
+10000000 loops, best of 3: 53.8 ns per loop
+
+%timeit x*x
+10000000 loops, best of 3: 38.5 ns per loop
+
+%timeit numpy.square(x)
+1000000 loops, best of 3: 1.09 µs per loop
+
+#the second one was the fastest -----------------------------------4
+
+%lsmagic
+Out[16]: 
+Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %colors  %config  %connect_info  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %guiref  %hist  %history  %install_default_config  %install_ext  %install_profiles  %killbgscripts  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %lsmagic  %macro  %magic  %man  %matplotlib  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+
+#so there are 24 cell magic commands------------------------------5
